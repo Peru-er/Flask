@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>British Film World</title>
+    <style>
+        body {
+            font-family: Baskerville, serif;
+            background-color: #0f0c1e;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+
+        a, a:visited, a:hover, a:active {
+            color: #d8b4ff;
+            text-decoration: none;
+            outline: none;
+        }
+
+        a:hover {
+            text-shadow: 0 0 5px #d8b4ff;
+        }
+
+        .film-link {
+            display: block;
+            margin: 15px 0;
+            font-size: 20px;
+        }
+
+        .nav {
+            margin-bottom: 40px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="nav">
+        <a href="{{ url_for('index') }}">Home</a> |
+        <a href="{{ url_for('random_film') }}">Random Film</a>
+    </div>
+
+    {% block content %}{% endblock %}
+</body>
+</html>
