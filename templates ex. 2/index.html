@@ -1,0 +1,11 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Popular Films</h1>
+    {% for id, film in films.items() %}
+        <a class="film-link" href="{{ url_for('film_detail', film_id=id) }}">
+            {{ film.title }}
+        </a>
+    {% endfor %}
+{% endblock %}
