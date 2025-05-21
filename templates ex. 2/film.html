@@ -1,0 +1,9 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>{{ film.title }}</h1>
+    <p>{{ film.description }}</p>
+    <br>
+    <a href="{{ url_for('index') }}">← Back to Home</a>
+{% endblock %}
