@@ -1,0 +1,29 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+    <div class='form-container'>
+        <h2>Register for the Event</h2>
+        <form method='POST'>
+            <div class='mb-3 text-start'>
+                <label for='name'>Name</label>
+                <input type='text' id='name' name='name' required>
+            </div>
+            <div class='mb-3 text-start'>
+                <label for='email'>Email</label>
+                <input type='email' id='email' name='email' required>
+            </div>
+            <div class='mb-3 text-start'>
+                <label for='time'>Preferred Time</label>
+                <select id='time' name='time' required>
+                    <option value='Morning'>Morning</option>
+                    <option value='Afternoon'>Afternoon</option>
+                    <option value='Evening'>Evening</option>
+                </select>
+            </div>
+            <button type='submit'>Register</button>
+        </form>
+    </div>
+{% endblock %}
