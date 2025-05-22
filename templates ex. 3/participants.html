@@ -1,0 +1,33 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class='mb-4'>Registered Participants</h2>
+
+{% if participants %}
+<table class='table table-striped table-dark'>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Participation Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for p in participants %}
+        <tr>
+            <td>{{ p.name }}</td>
+            <td>{{ p.email }}</td>
+            <td>{{ p.time }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p>No one has registered yet.</p>
+{% endif %}
+
+<a href='{{ url_for("event_register") }}' class='btn btn-secondary mt-3'>Back to form</a>
+{% endblock %}
+
+
